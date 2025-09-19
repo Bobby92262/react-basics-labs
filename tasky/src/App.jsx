@@ -14,12 +14,15 @@ function App() {
   return (
     <div className="container">
       <h1>Tasky</h1>
-      <Task title = {taskState.tasks[0].title} deadline={taskState.tasks[0].deadline} description={taskState.tasks[0].description} />
-      <Task title = {taskState.tasks[1].title} deadline={taskState.tasks[1].deadline} description={taskState.tasks[1].description} />
-      <Task title = {taskState.tasks[2].title} deadline={taskState.tasks[2].deadline} description={taskState.tasks[2].description}/>
+      {taskState.tasks.map((task) => ( //map() function on tasks array in the taskState object
+        <Task //Arrow function into the map method, param 'task' represents "task" array element
+          title={task.title} //For every task in taskState.tasks array create a <Task /> component
+          description={task.description} //PAss proprs for the current task (title,description,deadline)
+          deadline={task.deadline}
+        />
+      ))}
     </div>
-  );
-}
+)}
 
 export default App;
 
