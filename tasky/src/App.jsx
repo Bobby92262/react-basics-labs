@@ -6,9 +6,9 @@ import React, {useState} from 'react';
 function App() {
   const [ taskState, setTaskState ] = useState({
     tasks: [
-      { id: 1, title: "Dishes", description: "Empty dishwasher", deadline: "Today", done: false},
-      { id: 2, title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow", done: false},
-      { id: 3, title: "Tidy up", deadline:"Today", done: false}
+      { id: 1, title: "Dishes", description: "Empty dishwasher", deadline: "Today", priority:"Low", done: false},
+      { id: 2, title: "Laundry", description: "Fold clothes and put away", priority:"Medium", deadline: "Tomorrow", done: false},
+      { id: 3, title: "Tidy up", deadline:"Today", priority:"High", done: false}
     ]
   });
 
@@ -27,6 +27,7 @@ function App() {
           title={task.title} //For every task in taskState.tasks array create a <Task /> component
           description={task.description} //Pass props for the current task (title,description,deadline)
           deadline={task.deadline}
+          priority={task.priority}
           key={task.id}
           done={task.done}
           markDone={() => doneHandler(index)} //index denotes the position of the task in the taskState.tasks array -> Indentify which task clicked

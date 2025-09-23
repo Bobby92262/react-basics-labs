@@ -44,6 +44,10 @@ div {
   font-style: italic;
  }
 
+ .priority {
+  font-weight: bold;
+ }
+
  button {
   border: none;
   border-radius: 3px;
@@ -61,4 +65,3 @@ div {
   color: green;
  }
 
- 
