@@ -45,7 +45,19 @@ div {
  }
 
  .priority {
+  font-weight: bolder;
+ }
+
+ .dropbox{
+  display: block;
+  width: 120px;
+  height: 30px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
   font-weight: bold;
+  text-align: center;
+  margin: 0 auto
  }
 
  button {
@@ -71,6 +83,7 @@ div {
   right: 5px;
   color: red;
  }
+
 
  /* Form styling */
  input[type=text], input[type=date] {
@@ -102,5 +115,15 @@ form {
   text-align: left;
   width: 50%;
   margin: auto;
+}
+
+select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
